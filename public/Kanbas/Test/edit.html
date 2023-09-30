@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <title>Edit Page</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 sidebar">
+                <div class="sidebar-logo">
+                    <img src="../../kanbasNavigation/northeastern_logo.png" alt="Company Logo" width="80">
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../account/accountNavigation/index.html">
+                            <i class="fas fa-user-circle act"></i>
+                            <span class="menu-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-tachometer-alt pas"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fas fa-book pas"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-calendar-alt pas"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope-open-text pas"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="far fa-clock pas"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-tv pas"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-arrow-circle-right pas"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-question-circle pas"></i>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main role="main" class="col-md-9 col-lg-10">
+                <div class="content-wrapper">
+                    <div class="top-section">
+                        <div class="menu-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="profile-name">
+                            Meet Patel's Profile
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <nav class="col-md-3 d-md-block left-navigation">
+                            <ul>
+                                <li><a href="../courses/home/home.html">Home</a></li>
+                                <li><a href="#">Module</a></li>                        
+                                <li><a href="#">Piazza</a></li>
+                                <li><a href="#">Zoom Meetings</a></li>
+                                <li><a href="../assignments/index.html">Assignments</a></li>
+                                <li><a href="#">Quizzes</a></li>
+                                <li><a href="../grades/grades.html">Grades</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">Panopto Video</a></li>
+                                <li><a href="#">Discussion</a></li>
+                                <li><a href="#">Announcements</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Files</a></li>
+                                <li><a href="#">Rubrics</a></li>
+                                <li><a href="#">Outcomes</a></li>
+                                <li><a href="#">Collaborations</a></li>
+                                <li><a href="#">Syllabus</a></li>
+                                <li><a href="../settings/course_details.html">Settings</a></li>
+                            </ul>
+                        </nav>
+                        <div class="col-md-9 right-content">
+                            <!-- Content here ----------------- -->
+                            <table>
+                                <tr>
+                                    <td valign="top">
+                                        <!-- <select id="assignment-dropdown-1">
+                                            <option value="EDIT">Edit</option>
+                                            <option value="SPEED-GRADER" selected>Speed Grader</option>
+                                            <option value="DUPLICATE">Duplicate</option>
+                                            <option value="DELETE">Delete</option>
+                                            <option value="MOVE-TO">Move To...</option>
+                                            <option value="SEND-TO">Send To...</option>
+                                            <option value="COPY-TO">Copy To...</option>
+                                            <option value="SHARE-TO-COMMONS">Share to Commons</option>
+                                        </select> -->
+                                        <div class="container">
+                                            <button type="button" class="published-button-setup">
+                                                <i class="fas fa-check-circle" style="color: #39944c;"></i>
+                                                <span style="color: #39944c;"><b>Published</b></span>
+                                            </button>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-light" style="margin-top: 10px;">
+                                                    <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit Assignment Dates</button>
+                                                    <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        
+                                        <table width="100%" style="margin: 0 auto;">
+                                            <form>
+                                                <tr>
+                                                    <td class="set-top-td">
+                                                        <label for="ASSIGNMENT-NAME" style="text-align: left;">
+                                                            Assignment Name
+                                                        </label>
+                                                        <input id="ASSIGNMENT-NAME" type="text" value="A1 - ENV + HTML" class="form-control faded-border-input">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="set-top-td">
+                                                        <textarea cols="155" rows="5">This is the Assignment Description
+                                                        </textarea>
+                                                    </td>
+                                                </tr>
+                                                <table style="width: 90%;">
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%">
+                                                            <label for="points">Points</label>
+                                                        </td>
+                                                        <td class="set-td set-top-td">
+                                                            <input type="text" value="100" id="points" class="form-control set-text-input" style="width: 80%;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%">
+                                                            <label for="Assignment-Group">Assignment Group</label>
+                                                        </td>
+                                                        <td class="set-td set-top-td">
+                                                            <select id="Assignment-Group" style="width: 80%;" class="form-control set-text-input">
+                                                                <option value="ASSIGNMENTS" selected>ASSIGNMENTS</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%">
+                                                            <label for="Display-Grade">Display Grade as</label>
+                                                        </td>
+                                                        <td class="set-td set-top-td">
+                                                            <select id="Display-Grade" style="width: 80%;" class="form-control set-text-input">
+                                                                <option value="PERCENTAGE" selected>Percentage</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%">
+                                                        </td>
+                                                        <td class="set-td set-top-td">
+                                                            <input type="checkbox" value="Text Entry" style="margin-left: 20px;"
+                                                            name="check-entry-option" id="chkbox-entry"/>
+                                                            <label>Do not count this assignment towards final grade</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%" valign="top">
+                                                            <label for="Submission-Type">Submission Type</label>
+                                                        </td>
+                                                        <td>
+                                                            <table width="80%" style="border: 1px solid #ccc; margin-left: 20px;">
+                                                                <tr>
+                                                                    <td class="set-td set-top-td">
+                                                                        <select id="Submission-Type" style="width: 80%;" class="form-control set-text-input">
+                                                                            <option value="ONLINE" selected>Online</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="set-td set-top-td set-text-input" style="padding-left: 25px;">
+                                                                        <label for="Online Entry Option"><b>Online Entry Options</b></label><br>
+                                                                        <input type="checkbox" value="Text Entry" class="bigger-checkbox" style="margin-left: 5px;"
+                                                                        name="check-entry-option" id="chkbox-entry"/>
+                                                                        <label style="padding-left: 5px;">Text Entry</label><br>
+                                                                        <input type="checkbox" value="Website-URL" class="bigger-checkbox" style="margin-left: 5px;"
+                                                                        name="check-website-url" id="chkbox-website"/>
+                                                                        <label style="padding-left: 5px;">Website URL</label><br>
+                                                                        <input type="checkbox" value="Media-Recording" class="bigger-checkbox" style="margin-left: 5px;"
+                                                                        name="check-media" id="chkbox-media"/>
+                                                                        <label style="padding-left: 5px;">Media Recording</label><br>
+                                                                        <input type="checkbox" value="Student-Annotation" class="bigger-checkbox" style="margin-left: 5px;"
+                                                                        name="check-student-annotation" id="chkbox-student-annotation"/>
+                                                                        <label style="padding-left: 5px;">Student Annotation</label><br>
+                                                                        <input type="checkbox" value="File-Uploads" class="bigger-checkbox" style="margin-left: 5px;"
+                                                                        name="check-file-uploads" id="chkbox-file-uploads"/>
+                                                                        <label style="padding-left: 5px;">File Uploads</label><br><br>
+                        
+                        
+                                                                        <label for="submission-attempt"><b>Submission Attempts</b></label><br>
+                                                                        <select id="submission-attempt" class="form-control set-select">
+                                                                            <option value="UNLIMITED" selected>Unlimited</option>
+                                                                            <option value="ONCE">Once</option>
+                                                                            <option value="TWICE">Twice</option>
+                                                                            <option value="FIVE">Five</option>
+                                                                        </select><br>
+                        
+                        
+                                                                        <label for="plagarism-id"><b>Plagarism Review</b></label><br>
+                                                                        <select id="plagarism-id" class="form-control set-select">
+                                                                            <option value="NONE" selected>None</option>
+                                                                            <option value="YES">Yes</option>
+                                                                        </select><br>
+                        
+                        
+                                                                        <label for="Group-Assignment"><b>Group Assignment</b></label><br>
+                                                                        <input type="checkbox" id="group-id" class="bigger-checkbox" style="margin-left: 5px;">
+                                                                        <label id="group-id">This is a group assignment</label><br><br>
+                        
+                        
+                                                                        <label for="Peer-Reviews"><b>Peer Reviews</b></label><br>
+                                                                        <input type="checkbox" id="peer-review-id" class="bigger-checkbox" style="margin-left: 5px;">
+                                                                        <label id="peer-review-id">Require Peer Reviews</label>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="set-label set-top-td" width="20%" valign="top" style="padding-top: 40px;">
+                                                            <label for="assign">Assign</label>
+                                                        </td>
+                                                        <td>
+                                                            <table width="80%" style="border: 1px solid #ccc; margin-left: 20px; margin-top: 40px;">
+                                                                <tr>
+                                                                    <td class="set-td set-top-td set-text-input" style="padding-left: 25px; padding-right: 25px; padding-bottom: 40px;">
+                                                                        <label for="assign-to"><b>Assign to</b></label><br>
+                                                                        <input class="form-control" type="text" id="assign-to" value="Everyone"/><br>
+                        
+                        
+                                                                        <label id="due-id" class="control-label"><b>Due</b></label><br>
+                                                                        <input id="due-id" type="date" value="2021-01-01" class="form-control"><br>
+                        
+                                                                        <table width="100%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <label for="available-id"><b>Available From</b></label>
+                                                                                    <input id="available-id" type="date" value="2021-01-01" class="form-control">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <label for="until-id"><b>Until</b></label>
+                                                                                    <input id="until-id" type="date" value="2021-01-01" class="form-control">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                        
+                                                        </td>
+                                                        <td>
+                                                            <table width="80%" style="border: 1px solid #ccc; margin-left: 20px;">
+                                                                <tr>
+                                                                    <td>
+                                                                        <button width="80%" type="button" class="form-control" style="background-color: rgb(238, 236, 236)">+Add</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>    
+                                                    </tr>
+                                                </table>                                                
+                                                <hr>
+                                                <table width="100%" style="margin: 0 auto;">
+                                                    <tr>
+                                                        <td class="set-top-td">
+                                                            <input type="checkbox" id="group-id" class="bigger-checkbox" style="margin-left: 40px;">
+                                                            <label id="group-id">Notify users that this content has changed</label>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <button type="button" class="btn btn-light">Cancel</button>
+                                                                <button type="button" class="btn btn-danger">Save</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <hr>
+                                            </form>
+                                        </table> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
