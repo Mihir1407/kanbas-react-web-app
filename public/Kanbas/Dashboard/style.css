@@ -48,13 +48,23 @@ body {
     text-decoration: none;
 }
 
-a {
+.sidebar a {
     color: inherit !important;
     text-decoration: none !important;
 }
 
-.nav-link a:hover {
+.sidebar a:hover {
     color: inherit;
+}
+
+.card a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.card a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: red !important;
 }
 
 .act {
@@ -66,7 +76,7 @@ a {
 }
 
 .content-wrapper {
-    margin-left: 85px;
+    margin-left: 95px;
     padding-top: 5px;
 }
 
@@ -80,12 +90,6 @@ a {
     font-size: 24px;
     cursor: pointer;
     margin-right: 10px;
-}
-
-.dashboard {
-    font-size: 38px;
-    color: black;
-    font-weight: 100;
 }
 
 /* specific to second columns */
@@ -127,39 +131,43 @@ a {
     margin-left: 100px;
 }
 
-/* for edit profile*/
-.edit-screen {
-    width: 700px;
+/* Custom CSS */
+.inner-content{
+    padding-left: 10px;
 }
 
-/* @media (max-width: 1300px) {
-    .left-navigation {
-        display: none;
-    }
 
-    .right-content {
-        margin-left: 0;
-    }
+.dashboard {
+    font-size: 36px;
+    color: #6A6F72;
+    font-weight: 100;
+}
 
-    .sidebar {
-        display: none;
-    }
-} */
+.published-courses {
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
+}
 
 /* Custom CSS */
 .course-card {
-    width: 250px;
-    min-width: 250px;
-    max-width: 270px;
-    margin: 30px 15px;
+    width: 255px;
+    margin: 15px 15px;
     overflow: hidden;
     position: relative;
+    padding: 0px;
+    transition: box-shadow 0.3s; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.course-card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .course-card .upper-half {
-    background-color: #007bff;
     color: white;
-    padding: 15px;
+    padding: 0px;
+    height: 146px;
     border-radius: 5px 5px 0 0;
     position: relative;
 }
@@ -175,29 +183,80 @@ a {
     padding: 15px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
+    color: #6A6F72;
+    font-size: 14px;
+    height: 120px;
 }
+
+.back-dblue{
+    background-color: #0577BC;
+}
+
+.font-dblue{
+    color:  #0577BC !important;
+    font-weight: 1000;
+}
+
+.back-lgray{
+    background-color: #EBEDEE;
+}
+
+.font-lgray{
+    color:  #EBEDEE !important;
+    font-weight: 1000;
+}
+
+.back-dgray{
+    background-color: #C1C1C1;
+}
+
+.font-dgray{
+    color:  #C1C1C1 !important;
+    font-weight: 1000;
+}
+
+.back-lblue{
+    background-color: #2DB9FF;
+}
+
+.font-lblue{
+    color:  #2DB9FF !important;
+    font-weight: 1000;
+}
+
+.course-name{
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.course-term{
+    font-size: 12px;
+    overflow: hidden;
+}
+
 
 /* Media Queries for responsiveness */
 @media (min-width: 992px) {
     .course-card {
-        max-width: 25%;
+        /* You can adjust the max-width for larger screens if needed */
+        max-width: 262px; /* Keep the fixed width for larger screens */
     }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
     .course-card {
-        max-width: 33.33%;
+        max-width: 262px; /* Keep the fixed width for medium screens */
     }
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
     .course-card {
-        max-width: 50%;
+        max-width: 262px; /* Keep the fixed width for smaller screens */
     }
 }
 
 @media (max-width: 575px) {
     .course-card {
-        max-width: 100%;
+        max-width: 100%; /* Allow course cards to take full width on smaller screens */
     }
 }
