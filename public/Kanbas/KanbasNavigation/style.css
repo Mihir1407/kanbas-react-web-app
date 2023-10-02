@@ -1,7 +1,10 @@
-.menu-text {
-    color: red;
+body {
+    font-family: 'Lato', sans-serif;
 }
 
+.menuLabel {
+    color: red;
+}
 
 .nav-link i {
     font-size: 24px;
@@ -9,14 +12,12 @@
     display: block;
 }
 
-
 .nav-link.active {
     background-color: white;
     color: red !important;
 }
 
-
-.sidebar {
+.sidePanel {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +28,7 @@
     padding: 0;
 }
 
-.sidebar-logo {
+.panelLogo {
     text-align: center;
     padding: 0;
 }
@@ -42,83 +43,87 @@
     text-decoration: none;
 }
 
-a {
+.sidePanel a {
     color: inherit !important;
     text-decoration: none !important;
 }
 
-.nav-link a:hover {
+.sidePanel a:hover {
     color: inherit;
 }
 
-.act {
+.card a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.card a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: red !important;
+}
+
+.activeIcon {
     color: #b6b7b9 !important;
 }
 
-.pas {
+.passiveIcon {
     color: #ff0000 !important;
 }
 
-.content-wrapper {
-    margin-left: 81px; 
-    padding-top: 20px; 
+.contentArea {
+    margin-left: 90px;
+    padding-top: 20px;
 }
 
-.top-section {
+.topArea {
     display: flex;
     align-items: center;
 }
 
-.menu-icon {
+.menuIconArea {
     color: red;
     font-size: 24px;
     cursor: pointer;
     margin-right: 10px;
 }
 
-.profile-name {
-    font-size: 18px;
-    color: black;
-    /* font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    margin-left: 25px;
-}
-
-.left-navigation {
-    width: 125px; 
-    background-color: white; 
-    color: red; 
-    padding: 0; 
-}
-
-.left-navigation ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.left-navigation ul li {
-    margin: 0;
-    padding-top: 15px; 
-}
-
-.left-navigation ul li a {
-    text-decoration: none;
-    color: red; 
-    font-size: 16px;
-    padding-left: 10px; 
-    display: block; 
-}
-
-.left-navigation ul li.selected a {
-    color: black !important; 
-    border-left: 2px solid black; 
-    padding-left: 8px; 
-}
-
-/* Default styles for larger screens */
-.left-navigation {
-    width: 125px;
+.leftNavArea {
+    width: 150px;
     background-color: white;
     color: red;
     padding: 0;
 }
 
+.leftNavArea ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leftNavArea ul li {
+    margin: 0;
+    padding-top: 15px;
+}
+
+.leftNavArea ul li a {
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    padding-left: 10px;
+    display: block;
+}
+
+.leftNavArea ul li.selected a {
+    color: black !important;
+    border-left: 2px solid black;
+    padding-left: 8px;
+}
+
+.profileNameArea {
+    font-size: 18px;
+    color: black;
+    margin-left: 25px;
+}
+
+.icon{
+    float: right;
+}
