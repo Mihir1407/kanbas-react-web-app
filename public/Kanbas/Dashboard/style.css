@@ -1,10 +1,8 @@
-/* common */
-
 body {
     font-family: 'Lato', sans-serif;
 }
 
-.menu-text {
+.menuLabel {
     color: red;
 }
 
@@ -22,7 +20,7 @@ body {
 }
 
 
-.sidebar {
+.sidePanel {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +31,7 @@ body {
     padding: 0;
 }
 
-.sidebar-logo {
+.panelLogo {
     text-align: center;
     padding: 0;
 }
@@ -48,12 +46,12 @@ body {
     text-decoration: none;
 }
 
-.sidebar a {
+.sidePanel a {
     color: inherit !important;
     text-decoration: none !important;
 }
 
-.sidebar a:hover {
+.sidePanel a:hover {
     color: inherit;
 }
 
@@ -67,89 +65,40 @@ body {
     text-decoration-color: red !important;
 }
 
-.act {
+.activeIcon {
     color: #b6b7b9 !important;
 }
 
-.pas {
+.passiveIcon {
     color: #ff0000 !important;
 }
 
-.content-wrapper {
+.contentArea {
     margin-left: 95px;
     padding-top: 5px;
 }
 
-.top-section {
+.topArea {
     display: flex;
     align-items: center;
 }
 
-.menu-icon {
-    color: red;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-/* specific to second columns */
-
-.left-navigation {
-    width: 125px;
-    background-color: white;
-    color: red;
-    padding: 0;
-}
-
-.left-navigation ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.left-navigation ul li {
-    margin: 0;
-    padding-top: 15px;
-}
-
-.left-navigation ul li a {
-    text-decoration: none;
-    color: red;
-    font-size: 16px;
-    padding-left: 10px;
-    display: block;
-}
-
-.left-navigation ul li.selected a {
-    color: black !important;
-    border-left: 2px solid black;
-    padding-left: 8px;
-}
-
-/* for right content */
-
-.right-content {
-    margin-left: 100px;
-}
-
-/* Custom CSS */
-.inner-content{
+.dashboardpage{
     padding-left: 10px;
 }
 
-
-.dashboard {
+.heading {
     font-size: 36px;
     color: #6A6F72;
     font-weight: 100;
 }
 
-.published-courses {
+.sub-heading {
     font-size: 28px;
     color: black;
     font-weight: 500;
 }
 
-/* Custom CSS */
 .course-card {
     width: 255px;
     margin: 15px 15px;
@@ -234,29 +183,35 @@ body {
     overflow: hidden;
 }
 
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 95;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; 
+}
 
-/* Media Queries for responsiveness */
 @media (min-width: 992px) {
     .course-card {
-        /* You can adjust the max-width for larger screens if needed */
-        max-width: 262px; /* Keep the fixed width for larger screens */
+        max-width: 262px; 
     }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
     .course-card {
-        max-width: 262px; /* Keep the fixed width for medium screens */
+        max-width: 262px; 
     }
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
     .course-card {
-        max-width: 262px; /* Keep the fixed width for smaller screens */
+        max-width: 262px; 
     }
 }
 
 @media (max-width: 575px) {
     .course-card {
-        max-width: 100%; /* Allow course cards to take full width on smaller screens */
+        max-width: 100%; 
     }
 }
