@@ -226,8 +226,7 @@ a {
 
 .grade-info .close-icon {
     position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: 205px;
     color: #333;
     float: right;
 }

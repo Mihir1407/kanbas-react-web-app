@@ -1,10 +1,13 @@
+/* common */
+
 body {
     font-family: 'Lato', sans-serif;
 }
 
-.menuLabel {
+.menu-text {
     color: red;
 }
+
 
 .nav-link i {
     font-size: 24px;
@@ -12,12 +15,14 @@ body {
     display: block;
 }
 
+
 .nav-link.active {
     background-color: white;
     color: red !important;
 }
 
-.sidePanel {
+
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +33,7 @@ body {
     padding: 0;
 }
 
-.panelLogo {
+.sidebar-logo {
     text-align: center;
     padding: 0;
 }
@@ -43,68 +48,66 @@ body {
     text-decoration: none;
 }
 
-.sidePanel a {
+a {
     color: inherit !important;
     text-decoration: none !important;
 }
 
-.sidePanel a:hover {
+.nav-link a:hover {
     color: inherit;
 }
 
-.card a {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
-.card a:hover {
-    text-decoration: underline !important;
-    text-decoration-color: red !important;
-}
-
-.activeIcon {
+.act {
     color: #b6b7b9 !important;
 }
 
-.passiveIcon {
+.pas {
     color: #ff0000 !important;
 }
 
-.contentArea {
-    margin-left: 90px;
+.content-wrapper {
+    margin-left: 95px;
     padding-top: 20px;
 }
 
-.topArea {
+.top-section {
     display: flex;
     align-items: center;
 }
 
-.menuIconArea {
-    color: red;
+.menu-icon {
+    color: #ff0000;
     font-size: 24px;
     cursor: pointer;
     margin-right: 10px;
 }
 
-.leftNavArea {
-    width: 150px;
+.profile-name {
+    font-size: 18px;
+    color: black;
+    margin-left: 25px;
+}
+
+/* specific to second columns */
+
+.left-navigation {
+    width: 125px;
     background-color: white;
-    color: red;
+    color: #ff0000;
     padding: 0;
 }
 
-.leftNavArea ul {
+.left-navigation ul {
     list-style-type: none;
     padding: 0;
 }
 
-.leftNavArea ul li {
+.left-navigation ul li {
     margin: 0;
     padding-top: 15px;
 }
 
-.leftNavArea ul li a {
+.left-navigation ul li a {
     text-decoration: none;
     color: red;
     font-size: 16px;
@@ -112,26 +115,44 @@ body {
     display: block;
 }
 
-.leftNavArea ul li.selected a {
+.left-navigation ul li.selected a {
     color: black !important;
     border-left: 2px solid black;
     padding-left: 8px;
 }
 
-.profileNameArea {
-    font-size: 18px;
-    color: black;
-    margin-left: 25px;
-}
-
-.icon{
-    float: right;
-}
 
 .breadcrumb-item+.breadcrumb-item::before {
-    content: "/";
+    content: ">";
 }
 
-.breadcrumb-item:last-of-type::before {
-    content: "";
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /* Color for odd-numbered rows */
+}
+.custom-table tbody tr:nth-child(even) {
+    background-color: white; /* Color for even-numbered rows */
+}
+
+.custom-table input[type="number"] {
+    text-align: center;
+}
+
+/* for right content */
+
+.right-content {
+    margin-left: 100px;
+}
+
+@media (max-width: 1300px) {
+    .left-navigation {
+        display: none;
+    }
+
+    .right-content {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
 }
