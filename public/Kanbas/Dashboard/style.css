@@ -192,6 +192,11 @@ body {
     z-index: 1000; 
 }
 
+.innerArea{
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
 @media (min-width: 992px) {
     .course-card {
         max-width: 262px; 

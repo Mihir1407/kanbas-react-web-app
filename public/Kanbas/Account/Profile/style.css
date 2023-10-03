@@ -2,7 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.menu-text {
+.menuLabel {
     color: red;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 
-.sidebar {
+.sidePanel {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ body {
     padding: 0;
 }
 
-.sidebar-logo {
+.panelLogo {
     text-align: center;
     padding: 0;
 }
@@ -46,34 +46,44 @@ body {
     text-decoration: none;
 }
 
-a {
+.sidePanel a {
     color: inherit !important;
     text-decoration: none !important;
 }
 
-.nav-link a:hover {
+.sidePanel a:hover {
     color: inherit;
 }
 
-.act {
+.card a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.card a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: red !important;
+}
+
+.activeIcon {
     color: #b6b7b9 !important;
 }
 
-.pas {
+.passiveIcon {
     color: #ff0000 !important;
 }
 
-.content-wrapper {
+.contentArea {
     margin-left: 95px;
     padding-top: 20px;
 }
 
-.top-section {
+.topArea {
     display: flex;
     align-items: center;
 }
 
-.menu-icon {
+.menuIconArea {
     color: red;
     font-size: 24px;
     cursor: pointer;
@@ -86,26 +96,24 @@ a {
     margin-left: 25px;
 }
 
-/* specific to second columns */
-
-.left-navigation {
+.leftNavArea {
     width: 125px;
     background-color: white;
     color: red;
     padding: 0;
 }
 
-.left-navigation ul {
+.leftNavArea ul {
     list-style-type: none;
     padding: 0;
 }
 
-.left-navigation ul li {
+.leftNavArea ul li {
     margin: 0;
     padding-top: 15px;
 }
 
-.left-navigation ul li a {
+.leftNavArea ul li a {
     text-decoration: none;
     color: red;
     font-size: 16px;
@@ -113,25 +121,22 @@ a {
     display: block;
 }
 
-.left-navigation ul li.selected a {
+.leftNavArea ul li.selected a {
     color: black !important;
     border-left: 2px solid black;
     padding-left: 8px;
 }
 
-/* for right content */
-
-.right-content {
+.rightArea {
     margin-left: 100px;
 }
 
-/* for edit profile*/
-.edit-screen {
+.editArea {
     width: 700px;
 }
 
 @media (max-width: 1300px) {
-    .left-navigation {
+    .leftNavArea {
         display: none;
     }
 
