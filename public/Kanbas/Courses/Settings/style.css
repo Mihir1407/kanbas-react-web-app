@@ -65,6 +65,7 @@ a {
 
 .icon{
     float: right;
+    padding-top: 7px;
 }
 
 .content-wrapper {
@@ -91,7 +92,7 @@ a {
 }
 
 .left-navigation {
-    width: 145px;
+    width: 150px;
     background-color: white;
     color: red;
     padding: 0;

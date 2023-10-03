@@ -126,6 +126,7 @@ body {
 
 .icon{
     float: right;
+    padding-top: 7px;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {

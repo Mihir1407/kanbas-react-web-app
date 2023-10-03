@@ -1,5 +1,3 @@
-/* common */
-
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -57,12 +55,17 @@ a {
     color: inherit;
 }
 
-.act {
+.activeIcon {
     color: #b6b7b9 !important;
 }
 
 .pas {
     color: #ff0000 !important;
+}
+
+.icon{
+    float: right;
+    padding-top: 7px;
 }
 
 .content-wrapper {
@@ -88,10 +91,8 @@ a {
     margin-left: 25px;
 }
 
-/* specific to second columns */
-
 .left-navigation {
-    width: 125px;
+    width: 150px;
     background-color: white;
     color: #ff0000;
     padding: 0;
@@ -127,17 +128,16 @@ a {
 }
 
 .custom-table tbody tr:nth-child(odd) {
-    background-color: #f8f9fa; /* Color for odd-numbered rows */
+    background-color: #f8f9fa; 
+    text-align: center;
 }
 .custom-table tbody tr:nth-child(even) {
-    background-color: white; /* Color for even-numbered rows */
+    background-color: white; 
 }
 
 .custom-table input[type="number"] {
     text-align: center;
 }
-
-/* for right content */
 
 .right-content {
     margin-left: 100px;
