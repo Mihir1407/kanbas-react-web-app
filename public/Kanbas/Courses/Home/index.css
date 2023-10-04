@@ -125,8 +125,15 @@ a {
     padding-left: 8px;
 }
 
+.custom-breadcrumb {
+    text-align: left; 
+    padding-top: 10px;
+}
 
-/* for right content */
+
+.menuIconArea {
+    margin-right: 20px; 
+}
 
 .breadcrumb-item+.breadcrumb-item::before {
     content: "/";

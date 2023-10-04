@@ -24,11 +24,11 @@
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    content: "/";
+    content: ">";
 }
 
-.breadcrumb-item:last-of-type::before {
-    content: ">";
+.breadcrumb {
+    background-color: white !important; 
 }
 
 .drag-handle {
@@ -56,7 +56,7 @@
 }
 
 .custom-background {
-    background-color: #f1f1f1;
+    background-color: #e2e3e5;
 }
 
 .set-margin { 
@@ -95,16 +95,12 @@
 
 
 .assignment-text {
-
-    /* font-size: 13px; */
     color: gray;
 }
 
 .set-font-style {
     color: black;
     text-decoration: none;
-
-    /* font-size: 13px; */
     font-weight: bold;
 }
 
@@ -112,17 +108,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: 18px; */
     font-weight: bold;
 
 }
 
 .green-left-border {
-    border-left: 5px solid #4ab05e; /* Set the left border to green (adjust width and color as needed) */
+    border-left: 5px solid #4ab05e; 
 }
 
 .gray-left-border {
-    border-left: 5px solid #f1f1f1; /* Set the left border to green (adjust width and color as needed) */
+    border-left: 5px solid #f1f1f1; 
 }
 
 .published-button-setup {
@@ -150,21 +145,19 @@
 
 .set-label {
     text-align: right;
-    margin-right: 30px;
+    margin-right: 20px;
+    padding-top: 5px;
 }
 
 .set-text-input {
-    width: 120px; 
+    width: 90px; 
     height: 35px;
 }
 
 .common-div {
-    /* Add your styles here */
     padding: 20px;
     border: 2px solid black;
 }
-
-
 
 
 .bigger-checkbox {
@@ -177,15 +170,8 @@
     
 }
 
-
-/* common */
-
 body {
     font-family: 'Lato', sans-serif;
-}
-
-.menu-text {
-    color: red;
 }
 
 
@@ -237,12 +223,17 @@ a {
     color: inherit;
 }
 
-.act {
+.activeIcon {
     color: #b6b7b9 !important;
 }
 
 .pas {
-    color: #ff0000 !important;
+    color: red !important;
+}
+
+.icon{
+    float: right;
+    padding-top: 7px;
 }
 
 .content-wrapper {
@@ -268,10 +259,8 @@ a {
     margin-left: 25px;
 }
 
-/* specific to second columns */
-
 .left-navigation {
-    width: 125px;
+    width: 145px;
     background-color: white;
     color: red;
     padding: 0;
@@ -307,6 +296,140 @@ a {
     margin-left: 100px;
 }
 
+
+/* for edit page */
+.margin-left {
+    margin-left: auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.padding-left-5 {
+    padding-left: 5px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.button-color {
+    color: #39944c;
+}
+
+.button-margin {
+    margin-top: 5px;
+}
+
+.td-width-48 {
+    width: 48.5%;
+}
+
+.margin-left-85 {
+    margin-left: 85px;
+}
+
+.padding-zero {
+    padding-top: 10px;
+}
+
+.content-margin {
+    margin-top: 20px;
+}
+
+.set-table {
+    margin-left: 14px;
+}
+
+.set-table-label {
+    margin-right: 50px;
+}
+
+.left-margin {
+    margin-left: 50px;
+}
+
+.add-button {
+    background-color: rgb(238, 236, 236)
+}
+
+.table-border {
+    border: 1px solid #ccc;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.padding-left {
+    padding-left: 20px;
+}
+
+.td-2 {
+    width: 29%;
+}
+
+.set-table-width {
+    width: 97%;
+}
+
+
+.input-text-width {
+    width: 40%;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.custom-left-padding {
+    padding-left: 74.5%;
+}
+
+.custom-padding-right{
+    padding-right: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.custom-font-size {
+    font-size: medium;
+}
+
+.left-border {
+    border-left: 5px solid green;
+}
+
+.correct-symbol {
+    color: #4ab05e; opacity: 0.5;
+}
+
+.pad-color {
+    color: #07974d;
+}
+
+.black-color {
+    color: #000000;
+}
+
+.padding-top-10 {
+    padding-top: 15px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.height {
+    height: 50px;
+}
 
 
 @media (max-width: 1300px) {

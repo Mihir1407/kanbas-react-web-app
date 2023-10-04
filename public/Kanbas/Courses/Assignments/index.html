@@ -16,23 +16,23 @@
         <div class="row">
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
                 <div class="sidebar-logo">
-                    <img src="../../kanbasNavigation/northeastern_logo.png" alt="Company Logo" width="80">
+                    <img src="../../../images/northeastern.jpg" alt="Company Logo" width="80">
                 </div>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../../account/accountNavigation/index.html">
-                            <i class="fas fa-user-circle act"></i>
-                            <span class="menu-text">Account</span>
+                        <a class="nav-link" href="../../KanbasNavigation/account.html">
+                            <i class="fas fa-user-circle activeIcon"></i>
+                            <span class="pas">Account</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../../Dashboard/screen.html">
                             <i class="fas fa-tachometer-alt pas"></i>
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
+                        <a class="nav-link active" href="../../KanbasNavigation/courses.html">
                             <i class="fas fa-book pas"></i>
                             Courses
                         </a>
@@ -75,269 +75,249 @@
                     </li>
                 </ul>
             </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-md-4">
                 <div class="content-wrapper">
                     <div class="top-section">
                         <div class="menu-icon">
-                            <i class="fas fa-bars"></i>
+                            <i class="fas fa-bars pas"></i>
                         </div>
                         <div class="profile-name">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">CS5610.12631.202410</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">Term</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">Section</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                    <li class="breadcrumb-item"><a href="#" class="pas" style="text-decoration: none;">CS5610.12631.202410</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="pas" style="text-decoration: none;">Fall 2023</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="pas" style="text-decoration: none;">Section</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
-                        <nav class="col-md-3 d-md-block left-navigation">
+                        <nav class="col-md-3 d-md-block left-navigation pas">
                             <ul>
-                                <li><a href="../courses/home/home.html">Home</a></li>
+                                <li><a href="../Home/home.html">Home</a></li>
                                 <li><a href="#">Module</a></li>                        
                                 <li><a href="#">Piazza</a></li>
                                 <li><a href="#">Zoom Meetings</a></li>
-                                <li><a href="../assignments/index.html">Assignments</a></li>
+                                <li class="selected"><a href="index.html">Assignments</a></li>
                                 <li><a href="#">Quizzes</a></li>
-                                <li><a href="../grades/grades.html">Grades</a></li>
+                                <li><a href="../Grades/index.html">Grades</a></li>
                                 <li><a href="#">People</a></li>
                                 <li><a href="#">Panopto Video</a></li>
-                                <li><a href="#">Discussion</a></li>
-                                <li><a href="#">Announcements</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Files</a></li>
-                                <li><a href="#">Rubrics</a></li>
-                                <li><a href="#">Outcomes</a></li>
-                                <li><a href="#">Collaborations</a></li>
-                                <li><a href="#">Syllabus</a></li>
-                                <li><a href="../settings/course_details.html">Settings</a></li>
+                                <li><a href="#">Discussion<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Announcements<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Pages<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Files<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Rubrics<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Outcomes<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Collaborations<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Syllabus<i class="fas fa-eye-slash activeIcon icon"></i></a></li>
+                                <li><a href="#">Progress Reports (EAB Navigate)</a></li>
+                                <li><a href="../Settings/CourseDetails/index.html">Settings</a></li>
                             </ul>
                         </nav>
                         <div class="col-md-9 right-content">
-                            <!-- Content here ----------------- -->
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" style="width: 40%; margin-top: 10px;" class="form-control" placeholder="Search for Assignments" id="Assignment-Names">
+                                <div class="col-7">
+                                    <input type="text" class="form-control margin-top input-text-width" placeholder="Search for Assignments" id="Assignment-Names">
                                 </div>
-                                <div class="col-auto" style="padding-right: 0px;">
-                                    <div class="input-group">
-                                        <button type="button" class="btn btn-light">+Group</button>
-                                        <button type="button" class="btn btn-danger">+Assignment</button>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-ellipsis-v" style="color: #000000; margin-top: 15px;"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit Assignment Dates</button>
-                                                <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
-                                            </div>
-                                        </div>
+                                <div class="col-5 margin-top">
+                                    <button type="button" class="btn btn-light float-right">
+                                        <i class="fas fa-ellipsis-v black-color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger float-right">+Assignment</button>
+                                    <button type="button" class="btn btn-light float-right">+Group</button>    
+                                    
+                                    <div class="dropdown-menu ">
+                                        <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit Assignment Dates</button>
+                                        <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: 20px;">
-                                <div class="assignment-container d-flex align-items-center custom-background">
+
+                            <div class="row margin-top-20">
+                                <div class="col-12 assignment-container d-flex align-items-center custom-background custom-right-padding height">
                                     <div class="p-container custom-background set-heading">
-                                        <button type="button" class="btn btn-light custom-background">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
-                                        </button>
-                                        <p class="assignment-title mb-0" style="font-size: medium;">ASSIGNMENTS</p>
+                                        <i class="fas fa-grip-vertical black-color"></i>
+                                        <p class="assignment-title mb-0 custom-font-size margin-left-5">ASSIGNMENTS</p>
                                     </div>
-                                    <div class="button-container custom-background" style="padding-left: 65.5%;">
+                                    <div class="custom-left-padding">
                                         <button class="oval-button custom-background">40% of Total</button>
-                                    </div>
-                                    <div>
                                         <button class="custom-background" style="border: 0;">+</button>
-                                    </div>
-                                    <div class="btn-group custom-background">
-                                        <button type="button" class="btn btn-light custom-background">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit</button>
-                                            <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
-                                            <button class="dropdown-item" type="button" id="duplicate">Duplicate</button>
-                                            <button class="dropdown-item" type="button" id="delete">Delete</button>
-                                            <button class="dropdown-item" type="button" id="move-to">Move To...</button>
-                                            <button class="dropdown-item" type="button" id="send-to">Send To...</button>
-                                            <button class="dropdown-item" type="button" id="copy-to">Copy To...</button>
-                                            <button class="dropdown-item" type="button" id="share-to-commons">Share to Commons</button>
-                                        </div>
+                                        <i class="fas fa-ellipsis-v black-color"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row"  style="border-left: 5px solid green;">
-                                <div class="d-flex align-items-center" style="padding-top: 15px;">
-                                    <div class="drag-handle" draggable="true">
+                            
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center padding-top-10">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A1 SETUP</a><br>
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A1 SETUP</a><br>
                                         <p class="assignment-text">
                                             week 0 - SETUP - Week starting Monday September 5th (09/05/2022) Module | <br>
                                             <b>Due</b> Sept 18, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v" ></i>
                                         </button>
                                     </div>
                                 </div>
                                 <hr>
                             </div>
-                            <div class="row" style="border-left: 5px solid green;">
+                            <div class="row left-border">
                                 <div class="d-flex align-items-center">
-                                    <div class="drag-handle" draggable="true">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A2 HTML</a><br>
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A2 HTML</a><br>
                                         <p class="assignment-text">
                                             week 1 - HTML - Week starting Monday September 12th (09/12/2022) Module | <br>
                                             <b>Due</b> September 25, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v black-color"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <hr>
                             </div>
-                            <div class="row" style="border-left: 5px solid green;">
+                            <div class="row left-border">
                                 <div class="d-flex align-items-center">
-                                    <div class="drag-handle" draggable="true">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A3 CSS</a><br>
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A3 CSS</a><br>
                                         <p class="assignment-text">
                                             week 2 - CSS - Week starting Monday September 19th (09/19/2022) Module | <br>
                                             <b>Due</b> Oct 2, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v black-color"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <hr>
                             </div>
-                            <div class="row" style="border-left: 5px solid green;">
+                            <div class="row left-border">
                                 <div class="d-flex align-items-center">
-                                    <div class="drag-handle" draggable="true">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A4 BOOTSTRAP</a><br>
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A4 BOOTSTRAP</a><br>
                                         <p class="assignment-text">
                                             week 3 - Bootstrap - Week starting Monday September 26th (09/26/2022) Module | <br>
                                             <b>Due</b> Oct 10, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v black-color"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <hr>
                             </div>
-                            <div class="row" style="border-left: 5px solid green;">
+                            <div class="row left-border">
                                 <div class="d-flex align-items-center">
-                                    <div class="drag-handle" draggable="true">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A5 JAVASCRIPT</a><br>
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A5 JAVASCRIPT</a><br>
                                         <p class="assignment-text">
                                             week 4 - JavaScript - Week starting Monday October 3rd (10/03/2022) Module | <br>
                                             <b>Due</b> Oct 16, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v black-color"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <hr>
                             </div>
-                            <div class="row" style="border-left: 5px solid green;">
+                            <div class="row left-border">
                                 <div class="d-flex align-items-center">
-                                    <div class="drag-handle" draggable="true">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
                                         <button type="button" class="left-button-setup">
-                                            <i class="fas fa-grip-vertical" style="color: #000000;"></i>
+                                            <i class="fas fa-grip-vertical black-color"></i>
                                         </button>
                                         <button type="button" class="left-button-setup">
-                                            <i class="far fa-clipboard" style="color: #07974d;"></i>
+                                            <i class="far fa-clipboard pad-color"></i>
                                         </button>
                                     </div>
                                     <div>
-                                        <a href="edit.html" class="set-font-style">A6 REACT</a><br>
-                                        <!-- <a href="#">Multiple Modules</a> | Not available yet -->
+                                        <a href=" ../Assignments/AssignmentEditor/edit.html" class="set-font-style">A6 REACT</a><br>
                                         <p class="assignment-text">
                                             week 5 - React & Routing - Week starting Monday October 10th (10/10/2022) Module | <br>
                                             <b>Due</b> Oct 23, 2022 at 11:59pm | 100 pts
                                         </p>
                                     </div>
-                                    <div style="margin-left: auto;">
+                                    <div class="margin-bottom-20 margin-left">
                                         <button type="button" class="button-setup" disabled>
-                                            <i class="fas fa-check-circle" style="color: #4ab05e; opacity: 0.5;"></i>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
                                         </button>
                                         <button type="button" class="button-setup">
-                                            <i class="fas fa-ellipsis-v" style="color: #000000;"></i>
+                                            <i class="fas fa-ellipsis-v black-color"></i>
                                         </button>
                                     </div>
                                 </div>
                             </div>   
-                            <div class="row" style="margin-top: 30px;">
+                            <div class="row margin-top-30">
                                 <h2>QUIZZES 10% of Total
                                     <select id="assignment-dropdown-2">
                                         <option value="EDIT" selected>Edit</option>
