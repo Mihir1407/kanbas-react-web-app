@@ -2,7 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.menu-text {
+.menuArea {
     color: red;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 
-.sidebar {
+.sidePanel {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ body {
     padding: 0;
 }
 
-.sidebar-logo {
+.sidePanel-logo {
     text-align: center;
     padding: 0;
 }
@@ -59,7 +59,7 @@ a {
     color: #b6b7b9 !important;
 }
 
-.pas {
+.passiveIcon {
     color: red !important;
 }
 
@@ -68,12 +68,12 @@ a {
     padding-top: 7px;
 }
 
-.content-wrapper {
+.contentArea {
     margin-left: 95px;
     padding-top: 20px;
 }
 
-.top-section {
+.topArea {
     display: flex;
     align-items: center;
 }
@@ -85,30 +85,30 @@ a {
     margin-right: 10px;
 }
 
-.profile-name {
+.profileArea {
     font-size: 18px;
     color: black;
     margin-left: 25px;
 }
 
-.left-navigation {
+.leftArea {
     width: 150px;
     background-color: white;
     color: red;
     padding: 0;
 }
 
-.left-navigation ul {
+.leftArea ul {
     list-style-type: none;
     padding: 0;
 }
 
-.left-navigation ul li {
+.leftArea ul li {
     margin: 0;
     padding-top: 15px;
 }
 
-.left-navigation ul li a {
+.leftArea ul li a {
     text-decoration: none;
     color: red;
     font-size: 16px;
@@ -116,22 +116,22 @@ a {
     display: block;
 }
 
-.left-navigation ul li.selected a {
+.leftArea ul li.selected a {
     color: black !important;
     border-left: 2px solid black;
     padding-left: 8px;
 }
 
-.right-content {
+.rightArea {
     margin-left: 100px;
 }
 
 @media (max-width: 1300px) {
-    .left-navigation {
+    .leftArea {
         display: none;
     }
 
-    .right-content {
+    .rightArea {
         margin-left: 0;
     }
 
