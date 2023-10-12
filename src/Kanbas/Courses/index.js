@@ -1,14 +1,19 @@
 import db from "../../Kanbas/Database";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import "./style.css";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CourseNavigation from "./CourseNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
+import Modules from "./Modules";
 
 function Courses() {
     const { courseId } = useParams();
     const course = db.courses.find((course) => course._id === courseId);
+    const location = useLocation();
+
+    const pathnameParts = location.pathname.split("/");
+    const activeBreadcrumb = decodeURIComponent(pathnameParts.pop());
 
     return (
         <div className="courses">
@@ -26,6 +31,9 @@ function Courses() {
                                             {course.name}
                                         </div>
                                     </li>
+                                    <li className="breadcrumb-item active" aria-current="page">
+                                        {activeBreadcrumb}
+                                    </li>
                                 </ol>
                             </nav>
                         </div>
@@ -33,11 +41,11 @@ function Courses() {
                     <hr />
                     <div class="row">
                         <CourseNavigation />
-                        <div className="col-md-9 rightArea">
+                        <div className="col-md-8 rightArea">
                             <Routes>
                                 <Route path="/" element={<Navigate to="Home" />} />
                                 <Route path="Home" element={<h1>Home</h1>} />
-                                <Route path="Modules" element={<h1>Modules</h1>} />
+                                <Route path="Modules" element={<Modules />} />
                                 <Route path="Assignments" element={<h1>Assignments</h1>} />
                                 <Route
                                     path="Assignments/:assignmentId"

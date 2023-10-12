@@ -1,5 +1,5 @@
 import { Link, useParams, useLocation } from "react-router-dom";
-import "../style.css"
+import "./style.css"
 
 function CourseNavigation() {
     const links = ["Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Quizzes", "Grades", "People", "Panopto Video",
@@ -14,7 +14,7 @@ function CourseNavigation() {
                         <Link
                             key={index}
                             to={`/Kanbas/Courses/${courseId}/${link}`}
-                            className={`${pathname.includes(link) ? "selected" : ""}`}>
+                            className={`${pathname.includes(encodeURIComponent(link)) ? "selected" : ""}`}>
                             {link}
                         </Link>
                     </li>

@@ -3,7 +3,7 @@ body {
 }
 
 .courses .contentArea {
-    margin-left: 85px;
+    margin-left: 80px;
     padding-top: 0px;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .profileNameArea .breadcrumb-item:last-of-type::before {
-    content: "";
+    content: ">";
 }
 
 .profileNameArea .nav-link i {
@@ -61,39 +61,3 @@ body {
     float: right;
     padding-top: 7px;
 }
-
-.row .leftNavArea {
-    width: 190px;
-    background-color: white;
-    color: red;
-    padding: 0;
-}
-
-.leftNavArea ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.leftNavArea ul li {
-    margin: 0;
-    padding-top: 15px;
-}
-
-.leftNavArea ul li a {
-    text-decoration: none;
-    color: red;
-    font-size: 16px;
-    padding-left: 10px;
-    display: block;
-}
-
-.leftNavArea .selected{
-    color: black !important;
-    border-left: 2px solid black;
-    padding-left: 8px;
-}
-
-
-
-
-
