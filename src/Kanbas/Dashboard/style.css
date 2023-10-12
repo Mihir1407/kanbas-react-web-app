@@ -1,0 +1,135 @@
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.course-card .card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.course-card .card a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.contentArea {
+    margin-left: 90px;
+    padding-top: 20px;
+}
+
+.topArea {
+    display: flex;
+    align-items: center;
+}
+
+.dashboardpage{
+    padding-left: 10px;
+}
+
+.heading {
+    font-size: 36px;
+    color: #6A6F72;
+    font-weight: 100;
+}
+
+.sub-heading {
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
+    
+}
+
+.innerArea .course-card {
+    width: 255px;
+    margin: 15px 15px;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    transition: box-shadow 0.3s; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.course-card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.course-card .upper-half {
+    color: white;
+    padding: 0px;
+    height: 146px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.course-card .upper-half .dots {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+.course-card .lower-half {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    color: #6A6F72;
+    font-size: 14px;
+    height: 120px;
+}
+
+.back-dblue{
+    background-color: #0577BC;
+}
+
+.font-dblue{
+    color:  #0577BC !important;
+    font-weight: 700;
+}
+
+.course-name{
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.course-term{
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 95;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; 
+}
+
+.innerArea{
+    margin-top: 65px;
+    margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+    .course-card {
+        max-width: 262px; 
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .course-card {
+        max-width: 262px; 
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .course-card {
+        max-width: 262px; 
+    }
+}
+
+@media (max-width: 575px) {
+    .course-card {
+        max-width: 100%; 
+    }
+}

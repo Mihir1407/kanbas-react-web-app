@@ -1,0 +1,55 @@
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.courses .contentArea {
+    margin-left: 70px;
+    padding-top: 0px;
+}
+
+.courses .topArea {
+    display: flex;
+    align-items: center;
+}
+
+.menuIconArea {
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.profileNameArea {
+    font-size: 18px;
+    color: black;
+    margin-left: 25px;
+}
+
+.profileNameArea .breadcrumb-item+.breadcrumb-item::before {
+    content: "/";
+}
+
+.profileNameArea .breadcrumb-item:last-of-type::before {
+    content: "";
+}
+
+.profileNameArea .nav-link i {
+    font-size: 24px;
+    color: white;
+    display: block;
+}
+
+.profileNameArea .nav-link.active {
+    background-color: white;
+    color: red !important;
+}
+
+.passiveIcon {
+    color: red !important;
+    text-decoration: none;
+}
+
+
+
+
+

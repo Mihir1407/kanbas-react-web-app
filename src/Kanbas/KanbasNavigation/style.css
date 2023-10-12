@@ -1,0 +1,67 @@
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.menuLabel {
+    color: red;
+}
+
+.custom-icon-size {
+    font-size: 24px;
+    color: white;
+    display: block;
+    margin-left: 32px;
+  }
+
+.sidePanel .nav-link.active {
+    background-color: white;
+    color: red !important;
+}
+
+.sidePanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    width: 85px !important;
+    height: 100%;
+    padding: 0 !important;
+}
+
+.sidePanel .panelLogo {
+    text-align: center;
+    padding: 0;
+    width: 80px;
+}
+
+.panelLogo img {
+    width: 80px;
+    padding: 0;
+}
+
+.sidePanel .nav-link {
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sidePanel a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sidePanel a:hover {
+    color: inherit;
+}
+
+.activeIcon {
+    color: #b6b7b9;
+}
+
+.passiveIcon {
+    color: red;
+}
