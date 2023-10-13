@@ -2,18 +2,24 @@ body {
     font-family: 'Lato', sans-serif !important;
 }
 
+main {
+    width: 100% !important;
+}
+
 .courses .contentArea {
-    margin-left: 80px;
+    margin-left: 65px;
     padding-top: 0px;
+    width : 98%;
 }
 
 .courses .topArea {
-    display: flex;
-    align-items: left;
+    width: 100%;
 }
 
 .courses .rightArea {
-    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 85% !important;
 }
 
 .menuIconArea {
@@ -60,4 +66,13 @@ body {
 .icon{
     float: right;
     padding-top: 7px;
+}
+
+.icon-space2 {
+    margin-right: 10px;
+}
+
+.topArea .color-change {
+    color: black;
+    background-color: #e2e3e5;
 }

@@ -57,17 +57,98 @@ body {
     z-index: 9999;
 }
 
-.rightArea{
-    width: 850px !important;
-}
-
 .far-right-content {
     width: 240px;
+    margin-left: 30px;
 }
 
-.midArea{
-    width: 900px;
+.rcontent{
+    display: flex;
 }
+
+.icon-cell .fa-circle {
+    color: red;
+}
+
+.rcontent .icon-cell,
+.text-cell {
+    display: table-cell;
+}
+
+.todo {
+    margin-top: 15px;
+}
+
+.todo-hr {
+    margin: revert;
+    color: 
+    black !important;
+}
+
+.grade-info {
+    position: relative;
+    width: 220px;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.2rem 0.2rem !important;
+}
+
+.grade-info .close-icon {
+    position: absolute;
+    margin-left: 205px;
+    color: #333;
+    float: right;
+}
+
+.grade {
+    color: red !important;
+}
+
+.grade-small {
+    font-size: small !important;
+    color: #999999;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-icon-text {
+    display: flex;
+    align-items: center;
+    font-size: revert;
+}
+
+.view-calendar {
+    color: red !important;
+    font-size: small !important;
+}
+
+.calendar-icon-text i {
+    margin-right: 5px;
+}
+
+.cal-icon-cell,
+.cal-text-cell {
+    display: table-cell;
+}
+
+.cal-row {
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.cal-icon {
+    margin-right: 10px;
+}
+
 
 /* @media (min-width: 1298px) and (max-width: 1470px) {
     .rightArea {
