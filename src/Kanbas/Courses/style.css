@@ -2,14 +2,10 @@ body {
     font-family: 'Lato', sans-serif !important;
 }
 
-main {
-    width: 100% !important;
-}
-
 .courses .contentArea {
-    margin-left: 65px;
+    margin-left: 85px;
     padding-top: 0px;
-    width : 98%;
+    width : 95% !important;
 }
 
 .courses .topArea {
@@ -18,8 +14,8 @@ main {
 
 .courses .rightArea {
     display: flex;
-    flex-direction: row;
-    width: 85% !important;
+    flex-grow: 1;
+    flex-direction: row;;
 }
 
 .menuIconArea {
@@ -36,7 +32,7 @@ main {
 }
 
 .profileNameArea .breadcrumb-item+.breadcrumb-item::before {
-    content: "/";
+    content: ">";
 }
 
 .profileNameArea .breadcrumb-item:last-of-type::before {

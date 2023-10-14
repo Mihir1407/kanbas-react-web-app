@@ -5,7 +5,6 @@ import "./style.css";
 import { faCaretDown, faCaretRight, faCheckCircle, faEllipsisV, faPlus, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// Import the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ModuleList() {

@@ -60,10 +60,12 @@ body {
 .far-right-content {
     width: 240px;
     margin-left: 30px;
+    float: right;
 }
 
 .rcontent{
     display: flex;
+    flex-grow: 1;
 }
 
 .icon-cell .fa-circle {
@@ -149,22 +151,52 @@ body {
     margin-right: 10px;
 }
 
+.contentArea .row{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-/* @media (min-width: 1298px) and (max-width: 1470px) {
-    .rightArea {
-        margin-left: 20px !important;
+@media (max-width: 1500px) {
+    .rcontent .far-right-content {
+        display: none !important;
     }
-
-    .far-rightArea {
-        width: 220px !important;
-    }
-
-    .button-group-1 button {
-        width: 85px !important;
-        font-size: x-small !important;
+    .rcontent .midArea{
+        width: 100%
     }
 }
 
+@media (max-width: 1444px) {
+    .rcontent .far-right-content {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1125px) {
+    .rcontent .far-right-content {
+        display: none !important;
+    }
+    
+    .leftNavArea{
+        display: none !important;
+    }
+}
+
+@media (max-width: 958px) {
+    .rcontent .far-right-content {
+        display: none !important;
+    }
+    
+    .sidePanel, .leftNavArea{
+        display: none !important;
+    }
+
+    .contentArea{
+        margin-left: 0px !important;
+    }
+}
+
+
+/*
 @media (max-width: 1298px) {
     .far-rightArea {
         display: none;

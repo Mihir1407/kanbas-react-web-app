@@ -17,10 +17,11 @@ function Courses() {
 
     const pathnameParts = location.pathname.split("/");
     const activeBreadcrumb = decodeURIComponent(pathnameParts.pop());
+    const assignment = decodeURIComponent(pathnameParts.pop());
 
     return (
         <div className="courses container-fluid">
-            <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <main role="main" className="col-md-12">
                 <div className="contentArea">
                     <div className="topArea">
                         <div className="menuIconArea">
@@ -29,11 +30,16 @@ function Courses() {
                         <div className="profileNameArea">
                             <nav aria-label="breadcrumb" style={{ marginTop: "20px" }}>
                                 <ol className="breadcrumb">
-                                    <li className="breadcrumb-item active">
+                                    <li className="breadcrumb-item">
                                         <div className="passiveIcon">
                                             {course.name}
                                         </div>
                                     </li>
+                                    {assignment === "Assignments" ? (
+                                        <li className="breadcrumb-item passiveIcon">
+                                            Assignments
+                                        </li>
+                                    ) : ''}
                                     <li className="breadcrumb-item active" aria-current="page">
                                         {activeBreadcrumb}
                                     </li>
@@ -53,7 +59,7 @@ function Courses() {
                                 <Route path="Home" element={<Home />} />
                                 <Route path="Modules" element={<Modules />} />
                                 <Route path="Assignments" element={<Assignments />} />
-                                <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
+                                <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                                 <Route path="Grades" element={<h1>Grades</h1>} />
                             </Routes>
                         </div>

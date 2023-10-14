@@ -27,6 +27,7 @@ body {
     width: 85px !important;
     height: 100%;
     padding: 0 !important;
+    z-index: 100;
 }
 
 .sidePanel .panelLogo {

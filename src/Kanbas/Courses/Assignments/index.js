@@ -71,7 +71,7 @@ function Assignments() {
             {courseAssignments.map((assignment) => (
             <div className="row left-border">
                 <div className="d-flex align-items-center padding-top-10">
-                    <div className="drag-handle margin-bottom-20" draggable="true">
+                    <div className="drag-handle margin-bottom-20">
                         <button type="button" className="left-button-setup">
                             <FontAwesomeIcon icon={faGripVertical} className="black-color" />
                         </button>
@@ -81,11 +81,11 @@ function Assignments() {
                     </div>
                     <div>
                         <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="set-font-style">
-                            {assignment._id}
+                            {assignment._id} - {assignment.title}
                         </Link>
                         <br />
                         <p className="assignment-text">
-                            {assignment.title}
+                        <span className="passiveIcon">Multiple Modules</span> | 100 pts
                         </p>
                     </div>
                     <div className="margin-bottom-20 margin-left">
@@ -97,7 +97,6 @@ function Assignments() {
                         </button>
                     </div>
                 </div>
-                <hr />
             </div>
             ))}
         </div>
