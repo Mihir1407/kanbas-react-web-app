@@ -1,0 +1,38 @@
+.custom-table .pas {
+    color: #ff0000 ;
+}
+
+.custom-table input[type="number"] {
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.grades-container {
+    margin-left: 100px;
+    width: 900px;
+}
+
+.rightArea .custom-table .gray-row {
+    background-color: #f2f2f292;
+}
+
+.custom-table tbody tr .text-center{
+    text-align: left;
+}
+
+@media (max-width: 1300px) {
+    .left-navigation {
+        display: none;
+    }
+
+    .right-content {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
