@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBan, faCheckCircle, faFileCode, faPencilSquare, faBullseye, faBarChart, faBullhorn, faTimes, faCircle, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBan, faCheckCircle, faFileCode, faPencilSquare, faBullseye, faBarChart, faBullhorn, faTimes, faCircle, faCalendarAlt, faDumbbell, faBell } from '@fortawesome/free-solid-svg-icons';
 import "./style.css"
 import ModuleList from '../Modules/ModuleList';
 
@@ -51,7 +51,7 @@ function Home() {
                         <FontAwesomeIcon icon={faBarChart} /> New Analytics
                     </button>
                     <button className="btn btn-secondary color-change">
-                        View Course Notifications
+                        <FontAwesomeIcon icon={faBell} />View Course Notifications
                     </button>
                 </div>
                 <div className="todo">
