@@ -15,6 +15,14 @@
     width: 900px;
 }
 
+.custom-table{
+    border: 2px solid lightgray;
+}
+
+.custom-table td, th{
+    border: 2px solid lightgray;
+}
+
 .rightArea .custom-table .gray-row {
     background-color: #f2f2f292;
 }

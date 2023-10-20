@@ -122,6 +122,9 @@ a {
     padding-left: 8px;
 }
 
+.custom-table{
+    border: 2px solid black !important;
+}
 
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">";
