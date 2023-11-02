@@ -1,22 +1,48 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
+import { useState, React } from "react";
+import { Link, useParams} from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from "react-router-dom";
 import {
     faEllipsisV,
     faGripVertical,
     faClipboard,
     faCheckCircle,
+    faFileEdit,
+    faTrash,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+    deleteAssignment
+} from './assignmentsReducer';
 import { faClipboard as farClipboard } from '@fortawesome/free-solid-svg-icons';
 import "./style.css";
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = db.assignments;
-    const courseAssignments = assignments.filter(
-        (assignment) => assignment.course === courseId
-    );
+    const navigate = useNavigate();
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
+    const dispatch = useDispatch();
+    const [showConfirmationDialog, setShowConfirmationDialog] = useState(false);
+    const [assignmentToDelete, setAssignmentToDelete] = useState(null);
+
+    const confirmDelete = () => {
+        dispatch(deleteAssignment(assignmentToDelete))
+        setShowConfirmationDialog(false);
+    };
+
+    const cancelDelete = () => {
+        setShowConfirmationDialog(false);
+    };
+
+    const setdeleteAssignment = (assignmentId) => {
+        setAssignmentToDelete(assignmentId);
+        setShowConfirmationDialog(true);
+    };
+
+    const createNewAssignment = () => {
+        navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
+    };
 
     return (
         <div className="container-fluid">
@@ -34,7 +60,7 @@ function Assignments() {
                     <button type="button" className="btn btn-light float-right">
                         <FontAwesomeIcon icon={faEllipsisV} className="black-color" />
                     </button>
-                    <button type="button" className="btn btn-danger float-right">
+                    <button type="button" className="btn btn-danger float-right" onClick={createNewAssignment}>
                         +Assignment
                     </button>
                     <button type="button" className="btn btn-light float-right">
@@ -69,36 +95,51 @@ function Assignments() {
                 </div>
             </div>
             {courseAssignments.map((assignment) => (
-            <div className="row left-border">
-                <div className="d-flex align-items-center padding-top-10">
-                    <div className="drag-handle margin-bottom-20">
-                        <button type="button" className="left-button-setup">
-                            <FontAwesomeIcon icon={faGripVertical} className="black-color" />
-                        </button>
-                        <button type="button" className="left-button-setup">
-                            <FontAwesomeIcon icon={farClipboard} className="pad-color" />
-                        </button>
-                    </div>
-                    <div>
-                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="set-font-style">
-                            {assignment._id} - {assignment.title}
-                        </Link>
-                        <br />
-                        <p className="assignment-text">
-                        <span className="passiveIcon">Multiple Modules</span> | 100 pts
-                        </p>
-                    </div>
-                    <div className="margin-bottom-20 margin-left">
-                        <button type="button" className="button-setup" disabled>
-                            <FontAwesomeIcon icon={faCheckCircle} className="correct-symbol" />
-                        </button>
-                        <button type="button" className="button-setup">
-                            <FontAwesomeIcon icon={faEllipsisV} />
-                        </button>
+                <div className="row left-border">
+                    <div className="d-flex align-items-center padding-top-10">
+                        <div className="drag-handle margin-bottom-20">
+                            <button type="button" className="left-button-setup">
+                                <FontAwesomeIcon icon={faGripVertical} className="black-color" />
+                            </button>
+                            <button type="button" className="left-button-setup">
+                                <FontAwesomeIcon icon={farClipboard} className="pad-color" />
+                            </button>
+                        </div>
+                        <div>
+                            <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="set-font-style">
+                                {assignment._id} - {assignment.title}
+                            </Link>
+                            <br />
+                            <p className="assignment-text">
+                                <span className="passiveIcon">Multiple Modules</span> | 100 pts
+                            </p>
+                        </div>
+                        <div className="margin-bottom-20 margin-left">
+                            <button style={{ marginRight: "10px" }}
+                                className="btn btn-outline-danger deleteButton"
+                                onClick={() => setdeleteAssignment(assignment._id)}>
+                                <FontAwesomeIcon icon={faTrash} />
+                                &nbsp;
+                                Delete
+                            </button>
+                            <button type="button" className="button-setup" disabled>
+                                <FontAwesomeIcon icon={faCheckCircle} className="correct-symbol" />
+                            </button>
+                            <button type="button" className="button-setup">
+                                <FontAwesomeIcon icon={faEllipsisV} />
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
             ))}
+            {showConfirmationDialog && (
+                <div className="confirmation-dialog">
+                    <p>Are you sure you want to delete this assignment?</p>
+                    <button className="btn btn-outline-success" onClick={confirmDelete}>Yes</button>
+                    <button className="btn btn-outline-danger deleteButton" onClick={cancelDelete}>No</button>
+                    <button className="btn btn-outline-danger deleteButton" onClick={cancelDelete}>Cancel</button>
+                </div>
+            )}
         </div>
     );
 }
