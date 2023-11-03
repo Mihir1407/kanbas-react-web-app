@@ -111,7 +111,7 @@ function Assignments() {
                             </Link>
                             <br />
                             <p className="assignment-text">
-                                <span className="passiveIcon">Multiple Modules</span> | 100 pts
+                                <span className="passiveIcon">Multiple Modules</span> | Due date: {assignment.dueDate} | 100 pts
                             </p>
                         </div>
                         <div className="margin-bottom-20 margin-left">
