@@ -12,9 +12,9 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-
+const API_BASE = process.env.REACT_APP_API_BASE;
 function Courses({ courses }) {
-    const URL = "http://localhost:4000/api/courses";
+    const URL = `${API_BASE}/courses`;
     const { courseId } = useParams();
     const location = useLocation();
     const [course, setCourse] = useState({});
