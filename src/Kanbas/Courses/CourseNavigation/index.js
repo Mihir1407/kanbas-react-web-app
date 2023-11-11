@@ -9,7 +9,7 @@ function CourseNavigation() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
     return (
-        <nav class="col-md-3 leftNavArea">
+        <nav className="col-md-3 leftNavArea">
             <ul>
                 {links.map((link, index) => (
                     <li>

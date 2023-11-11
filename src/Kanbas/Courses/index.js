@@ -1,5 +1,7 @@
 import db from "../../Kanbas/Database";
 import { useParams, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./style.css";
 import { faBars, faGlasses } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +14,19 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
 function Courses({ courses }) {
+    const URL = "http://localhost:4000/api/courses";
     const { courseId } = useParams();
     const location = useLocation();
-    const course = db.courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
     if (courseId) {
         const pathnameParts = location.pathname.split("/");
         const activeBreadcrumb = decodeURIComponent(pathnameParts.pop());

@@ -1,5 +1,5 @@
-import { useState, React } from "react";
-import { Link, useParams} from "react-router-dom";
+import { useState, React, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from "react-router-dom";
@@ -12,22 +12,28 @@ import {
     faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-    deleteAssignment
+    deleteAssignment, selectAssignments
 } from './assignmentsReducer';
 import { faClipboard as farClipboard } from '@fortawesome/free-solid-svg-icons';
 import "./style.css";
+import * as client from "./client";
 
 function Assignments() {
     const { courseId } = useParams();
     const navigate = useNavigate();
-    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
-    const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
     const dispatch = useDispatch();
+    useEffect(() => {
+        client.findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(selectAssignments(assignments))
+            );
+    }, [courseId]);
+    const courseAssignments = useSelector((state) => state.assignmentsReducer.assignments);
     const [showConfirmationDialog, setShowConfirmationDialog] = useState(false);
     const [assignmentToDelete, setAssignmentToDelete] = useState(null);
 
     const confirmDelete = () => {
-        dispatch(deleteAssignment(assignmentToDelete))
+        handleDeleteAssignment(assignmentToDelete);
         setShowConfirmationDialog(false);
     };
 
@@ -42,6 +48,11 @@ function Assignments() {
 
     const createNewAssignment = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
+    };
+    const handleDeleteAssignment = (assignmentId) => {
+        client.deleteAssignment(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
     };
 
     return (

@@ -1,53 +1,64 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { faCheckCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { addAssignment, updateAssignment } from '../assignmentsReducer'
+import { addAssignment, selectAssignment, updateAssignment } from '../assignmentsReducer'
 import { useDispatch, useSelector } from 'react-redux';
-
+import * as client from "./../client.js";
 function AssignmentEditor() {
   const { assignmentId } = useParams();
   const dispatch = useDispatch();
   const assignments = useSelector(state => state.assignmentsReducer.assignments);
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  const [formAssignment, setFormAssignment] = useState({
+    title: '',
+    description: '',
+    dueDate: '',
+    startDate: '',
+    endDate: '',
+  });
+  useEffect(() => {
+    if (assignmentId === "new") {
+      setFormAssignment({
+        title: '',
+        description: '',
+        dueDate: '',
+        startDate: '',
+        endDate: '',
+      });
+    } else {
+      const curAssignment = assignments.find(a => a._id === assignmentId);
+      if (curAssignment) {
+        setFormAssignment(curAssignment);
+      }
+    }
+  }, [assignmentId]);
+  const handleFieldChange = (e) => {
+    const { name, value } = e.target;
+    setFormAssignment(prev => ({ ...prev, [name]: value }));
+  };
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
-    const newAssignment = {
-      title: assignmentName,
-      description: assignmentDesc,
-      course: courseId,
-      dueDate: assignmentDue,
-      startDate: assignStart,
-      endDate: assignEnd,
-    };
     if (assignmentId === "new") {
-      dispatch(addAssignment(newAssignment));
+      handleAddAssignment(formAssignment);
     } else {
-      dispatch(updateAssignment({ ...newAssignment, _id: assignmentId }));
+      handleUpdateAssignment(formAssignment);
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   const handleCancel = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
-  const [assignmentName, setAssignmentName] = useState(
-    assignmentId === "new" ? "" : assignment.title
-  );
-  const [assignmentDesc, setAssignmentDesc] = useState(
-    assignmentId === "new" ? "" : assignment.description
-  );
-  const [assignmentDue, setAssignmentDue] = useState(
-    assignmentId === "new" ? "" : assignment.dueDate
-  );
-  const [assignStart, setAssignStart] = useState(
-    assignmentId === "new" ? "" : assignment.startDate
-  );
-  const [assignEnd, setAssignEnd] = useState(
-    assignmentId === "new" ? "" : assignment.endDate
-  );
+  const handleAddAssignment = (assignment) => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+  const handleUpdateAssignment = async (assignment) => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
   return (
     <div className="assignEdit">
       <div className="row">
@@ -67,12 +78,12 @@ function AssignmentEditor() {
           <label htmlFor="ASSIGNMENT-NAME" className="text-align-left">
             Assignment Name
           </label>
-          <input id="ASSIGNMENT-NAME" type="text" onChange={(e) => setAssignmentName(e.target.value)} value={assignmentName} className="form-control" />
+          <input id="ASSIGNMENT-NAME" name="title" type="text" value={formAssignment.title} onChange={handleFieldChange} className="form-control" />
         </div>
       </div>
       <div className="row">
         <div className="col-12">
-          <textarea cols="155" rows="5" value={assignmentDesc} onChange={(e) => setAssignmentDesc(e.target.value)} className="form-control content-margin">
+          <textarea cols="155" name="description" rows="5" value={formAssignment.description} onChange={handleFieldChange} className="form-control content-margin">
           </textarea>
         </div>
       </div>
@@ -177,18 +188,18 @@ function AssignmentEditor() {
                   value="Everyone" /><br />
 
                 <label id="due-id" class="control-label"><b>Due</b></label><br />
-                <input id="due-id" type="date" onChange={(e) => setAssignmentDue(e.target.value)} value={assignmentDue}
+                <input id="due-id" type="date" name="dueDate" onChange={handleFieldChange} value={formAssignment.dueDate}
                   class="form-control set-table-width" /><br />
 
                 <div className="set-table-width">
                   <div className="row">
                     <div className="col-md-6">
                       <label htmlFor="available-id"><b>Available From</b></label>
-                      <input id="available-id" onChange={(e) => setAssignStart(e.target.value)} type="date" defaultValue={assignStart} className="form-control" />
+                      <input id="available-id" name="startDate" onChange={handleFieldChange} type="date" defaultValue={formAssignment.startDate} className="form-control" />
                     </div>
                     <div className="col-md-6">
                       <label htmlFor="until-id"><b>Until</b></label>
-                      <input id="until-id" onChange={(e) => setAssignEnd(e.target.value)} type="date" defaultValue={assignEnd} className="form-control" />
+                      <input id="until-id" name="endDate" onChange={handleFieldChange} type="date" defaultValue={formAssignment.endDate} className="form-control" />
                     </div>
                   </div>
                 </div>
