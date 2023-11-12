@@ -197,7 +197,6 @@ function WorkingWithArrays() {
                         {todo.title}
                         <p>{todo.description}</p>
                         <p>{todo.due}</p>
-                        {todo.title}
                     </li>
                 ))}
             </ul>
