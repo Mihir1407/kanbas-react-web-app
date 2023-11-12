@@ -4,7 +4,7 @@ function EncodingParametersInURLs() {
     const [a, setA] = useState(34);
     const [b, setB] = useState(23);
     const [result, setResult] = useState(0);
-    const hostedServer = process.env.HOST_SERVER;
+    const hostedServer = process.env.REACT_APP_HOST_SERVER;
     const fetchSum = async (a, b) => {
         const response = await
             axios.get(`${hostedServer}/a5/add/${a}/${b}`);

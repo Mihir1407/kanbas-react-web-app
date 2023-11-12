@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function WorkingWithObjects() {
-    const hostedServer = process.env.HOST_SERVER;
+    const hostedServer = process.env.REACT_APP_HOST_SERVER;
     const [assignment, setAssignment] = useState({
         id: 1,
         title: "NodeJS Assignment",

@@ -1,7 +1,7 @@
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithArrays from "./WorkingWithArrays";
 import WorkingWithObjects from "./WorkingWithObjects";
-const hostedServer = process.env.HOST_SERVER;
+const hostedServer = process.env.REACT_APP_HOST_SERVER;
 function Assignment5() {
     return (
         <div>

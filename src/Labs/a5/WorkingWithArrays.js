@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function WorkingWithArrays() {
-    const hostedServer = process.env.HOST_SERVER;
+    const hostedServer = process.env.REACT_APP_HOST_SERVER;
     const API = `${hostedServer}/a5/todos`;
     const [errorMessage, setErrorMessage] = useState(null);
     const [todo, setTodo] = useState({
