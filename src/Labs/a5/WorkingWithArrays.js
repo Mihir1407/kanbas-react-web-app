@@ -75,11 +75,6 @@ function WorkingWithArrays() {
                 className="form-control mb-2"
                 type="number"
             />
-            <h3>Deleting from an Array</h3>
-            <a href={`${API}/${todo.id}/delete`}
-                className="btn btn-primary me-2">
-                Delete Todo with ID = {todo.id}
-            </a>
             <input
                 value={todo.title}
                 onChange={(e) => setTodo({
@@ -88,6 +83,36 @@ function WorkingWithArrays() {
                 className="form-control mb-2"
                 type="text"
             />
+            <textarea
+                onChange={(e) => setTodo({
+                    ...todo,
+                    description: e.target.value
+                })}
+                value={todo.description} type="text"
+                className="form-control mb-2"
+            />
+            <input
+                onChange={(e) => setTodo({
+                    ...todo, due: e.target.value
+                })}
+                value={todo.due} type="date"
+                className="form-control mb-2"
+            />
+            <label>
+                <input
+                    onChange={(e) => setTodo({
+                        ...todo, completed: e.target.checked
+                    })}
+                    value={todo.completed} type="checkbox"
+                    className="mb-2"
+                />
+                Completed
+            </label>
+            <h3>Deleting from an Array</h3>
+            <a href={`${API}/${todo.id}/delete`}
+                className="btn btn-primary me-2">
+                Delete Todo with ID = {todo.id}
+            </a>
             <h3>Updating an Item in an Array</h3>
             <a
                 href={`${API}/${todo.id}/title/${todo.title}`}
@@ -125,31 +150,6 @@ function WorkingWithArrays() {
                 Update Completed to {Boolean(todo.completed).toString()}
             </a>
             {/* Deletion and update end */}
-            <textarea
-                onChange={(e) => setTodo({
-                    ...todo,
-                    description: e.target.value
-                })}
-                value={todo.description} type="text"
-                className="form-control mb-2"
-            />
-            <input
-                onChange={(e) => setTodo({
-                    ...todo, due: e.target.value
-                })}
-                value={todo.due} type="date"
-                className="form-control mb-2"
-            />
-            <label>
-                <input
-                    onChange={(e) => setTodo({
-                        ...todo, completed: e.target.checked
-                    })}
-                    value={todo.completed} type="checkbox"
-                    className="mb-2"
-                />
-                Completed
-            </label>
             <button onClick={postTodo}
                 className="btn btn-warning mb-2 w-100" >
                 Post Todo
